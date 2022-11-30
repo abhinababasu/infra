@@ -12,5 +12,5 @@ Deploy
 ------
 ``` bash
 sudo bash
-curl -fsSL "https://raw.githubusercontent.com/abhinababasu/infra/main/deploy.sh" | bash
+curl -fsSL "https://raw.githubusercontent.com/abhinababasu/infra/main/deploy.sh?token=GHSAT0AAAAAAB26S7FFMCSRHQ23PFOQPDTGY4HBHLA" | bash
 ```
