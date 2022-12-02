@@ -22,7 +22,6 @@ docker pull bonggeek/nginx-rev-proxy
 docker pull bonggeek/elementservice
 docker pull bonggeek/wordament
 
-
 echo Start containers
 echo -------------------
 
@@ -35,4 +34,9 @@ docker run -d --restart="always" -p 8090:8090 bonggeek/wordament
 echo start elemental on 8080
 docker run -d --restart="always" -p 8080:8080 bonggeek/elementservice
 
+echo Yay!
+echo ----
 echo Consider pruning with docker image prune -a
+echo test options
+echo curl -i http://commonvm1.westus2.cloudapp.azure.com/wordament/?input=SPAVURNYGERSMSBE
+echo curl -i http://commonvm1.westus2.cloudapp.azure.com/elemental/?words=Basu
