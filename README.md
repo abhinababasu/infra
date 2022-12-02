@@ -7,10 +7,10 @@ How it works
 
 ```mermaid
 graph TD;
-    Web(bonggeek)-->nginx;
-    nginx --> default;
-    nginx(/elemental) --> localhost:8080;
-    nginx(/wordament) --> localhost:8090;
+    Web[Single Page App] --> RevProxy[nginx container on :80];
+    RevProxy --> |/| default[index.html];
+    RevProxy --> |/elemental| elemental[elemental app container :8080];
+    RevProxy --> |/wordament| wordament[wordament app container :8090];
 
 ```
 
