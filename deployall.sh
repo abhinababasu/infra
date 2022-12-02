@@ -14,6 +14,9 @@ docker ps --filter="ancestor=bonggeek/elementservice" -q | xargs docker stop
 echo Stopping nginx-rev-proxy
 docker ps --filter="ancestor=bonggeek/nginx-rev-proxy" -q | xargs docker stop
 
+echo Pruning!!!!
+docker image prune -a
+
 echo pulling all images
 docker pull bonggeek/nginx-rev-proxy
 docker pull bonggeek/elementservice
