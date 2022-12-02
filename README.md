@@ -2,6 +2,18 @@ infra
 =====
 nginx based reverse proxy that is run on my vm
 
+How it works
+------------
+
+```mermaid
+graph TD;
+    Web(bonggeek)-->nginx;
+    nginx --> default;
+    nginx(/elemental) --> localhost:8080;
+    nginx(/wordament) --> localhost:8090;
+
+```
+
 Build
 -----
 ``` bash
