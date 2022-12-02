@@ -14,9 +14,6 @@ docker ps --filter="ancestor=bonggeek/elementservice" -q | xargs docker stop
 echo Stopping nginx-rev-proxy
 docker ps --filter="ancestor=bonggeek/nginx-rev-proxy" -q | xargs docker stop
 
-echo Pruning!!!!
-docker image prune -a
-
 echo pulling all images
 docker pull bonggeek/nginx-rev-proxy
 docker pull bonggeek/elementservice
@@ -30,3 +27,5 @@ docker run -d --restart="always" -p 8090:8090 bonggeek/wordament
 
 echo start elemental on 8080
 docker run -d --restart="always" -p 8080:8080 bonggeek/elementservice
+
+echo Consider pruning with docker image prune -a
