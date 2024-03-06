@@ -26,7 +26,7 @@ echo Start containers
 echo -------------------
 
 echo start nginx
-docker run -d --restart="always" -p 80:80 bonggeek/nginx-rev-proxy
+docker run -d --restart="always" -p 80:80 --net="host" bonggeek/nginx-rev-proxy
 
 echo start wordament on 8090
 docker run -d --restart="always" -p 8090:8090 bonggeek/wordament

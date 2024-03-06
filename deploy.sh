@@ -5,4 +5,4 @@
 
 docker ps --filter="ancestor=bonggeek/nginx-rev-proxy" -q | xargs docker stop
 docker pull bonggeek/nginx-rev-proxy
-docker run -d --restart="always" -p 80:80 bonggeek/nginx-rev-proxy
+docker run -d --restart="always" -p 80:80 --net="host" bonggeek/nginx-rev-proxy
