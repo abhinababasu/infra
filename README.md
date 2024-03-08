@@ -9,8 +9,8 @@ How it works
 graph TD;
     Web[Single Page App] --> |REST| RevProxy[nginx container on :80];
     RevProxy --> |/| default[index.html];
-    RevProxy --> |/elemental| elemental[elemental app container :8080];
-    RevProxy --> |/wordament| wordament[wordament app container :8090];
+    RevProxy --> |/elm| elm[elmental app container :8080];
+    RevProxy --> |/wrd| wrd[wordament app container :8090];
 
 ```
 
