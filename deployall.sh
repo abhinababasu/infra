@@ -26,7 +26,7 @@ echo Start containers
 echo -------------------
 
 echo start nginx
-docker run -d --restart="always" -p 80:80 --net="host" bonggeek/nginx-rev-proxy
+docker run -d --restart="always" -p 80:80 --net="host" -v /srv/ftp/bonggeek:/usr/share/nginx/html bonggeek/nginx-rev-proxy
 
 echo start wordament on 8090
 docker run -d --restart="always" -p 8090:8090 bonggeek/wordament
@@ -38,5 +38,5 @@ echo Yay!
 echo ----
 echo Consider pruning with docker image prune -a
 echo test options
-echo curl -i http://commonvm1.westus2.cloudapp.azure.com/wordament/?input=SPAVURNYGERSMSBE
-echo curl -i http://commonvm1.westus2.cloudapp.azure.com/elemental/?words=Basu
+echo curl -i http://localhost/wordament/?input=SPAVURNYGERSMSBE
+echo curl -i http://localhost/elemental/?words=Basu
