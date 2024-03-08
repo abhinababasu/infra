@@ -8,7 +8,7 @@ How it works
 ```mermaid
 graph TD;
     Web[Single Page App] --> |REST| RevProxy[nginx container on :80];
-    RevProxy --> |/| default[index.html];
+    RevProxy --> |/| default[serves static website uploaded via ftp];
     RevProxy --> |/elm| elm[elmental app container :8080];
     RevProxy --> |/wrd| wrd[wordament app container :8090];
 
